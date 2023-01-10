@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Start */
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
+html{
+    font-size: 10px; /* tips 1rem = 10px*/
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Variable du projets */
+
+:root{
+    /* font */
+    --first-font: "Roboto", sans-serif;
+    --size-font: 10px;
+    --normale-font: 400;
+    --bold-font: 700;
+
+    /* color */
+    --first-color: rgb(255, 255, 255);
+    --first-color-ligh:rgb(255, 255, 255,0.8);
+    --second-color: rgb(0,0,0);
+    --second-color-dark: rgb(0,0,0,0.8);
+    --third-color: rgb(202,32,31);
+    --button-color: rgb(0, 113, 227);
+    --button-color-light: rgb(0, 113, 227,0.8);
+    
+    /* space */
+    --header-fixed-height: 4.8rem;
+
+}
+
+/* Setting du projets la ou on vas utiliser les variables */
+
+body{
+    font-family: var(--first-font);
+    font-size: var(--size-font);
+    font-weight: var(--normale-font);
+    background-color: var(--first-color);
+    color: var(--second-color-dark);
+    margin:var(--header-fixed-height)0 0 0 ;
+
+}
+
+/* LAYOUT */
+
+.section{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.6rem;
+    margin: 0 auto;
+}
+
+/* HEADER START */
+
+.header{
+    height: 4.8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--second-color-dark);
+}
+
+.header > .container{
+
+}
+
+/* HEADER MENU BOUTTON */
+
+
+.header > .container > .menu-button{
+
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem 1rem 0;
+    cursor: pointer;
+}
+
+.header > .container > .menu-button > .bar1,
+.header > .container > .menu-button > .bar2{
+
+    width: 3rem;
+    height: 0.2rem;
+    display: flex;
+    background-color: var(--first-color-ligh);
+}
+
+.header > .container > .menu-button.-active > .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 4px);
+    transform: rotate(-45deg) translate(-6px, 4px);
+ }
+ 
+ .header > .container > .menu-button.-active > .bar2 {
+    -webkit-transform: rotate(45deg) translate(-6px, -4px);
+    transform: rotate(45deg) translate(-6px, -4px);
+ } 
+
+
+/* HEADER END */
+

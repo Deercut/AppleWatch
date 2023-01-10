@@ -112,7 +112,7 @@ body{
 
 .header > .container > .menu-button > .bar1,
 .header > .container > .menu-button > .bar2{
-
+    transition: all .4s ease;
     width: 3rem;
     height: 0.2rem;
     display: flex;
@@ -128,6 +128,27 @@ body{
     -webkit-transform: rotate(45deg) translate(-6px, -4px);
     transform: rotate(45deg) translate(-6px, -4px);
  } 
+
+ /* HEADER MENU LOGO */
+
+ .header > .container > .logo{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ /* HEADER MENU BAG */
+
+ .header > .container > .bag{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
 
 
 /* HEADER END */

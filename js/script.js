@@ -23,3 +23,26 @@ function clickMenuButton(){
 // addEvent listener 
 
 $menuBtn.addEventListener("click", clickMenuButton)
+
+// Carrousel des produits
+
+const $bullet = document.querySelectorAll(".bullet");
+let $bulletActive = document.querySelector(".bullet.-active");
+let $productActive = document.querySelector(".product.-active");
+
+function clickBullet() {
+    let $bulletClicket = this;
+    $bulletActive.classList.remove("-active");
+    $bulletClicket.classList.add("-active");
+    $bulletActive = $bulletClicket;
+
+    $productActive.classList.remove("-active");
+    let idProduct = $bulletClicket.querySelector("a").getAttribute("href");
+    let $cibleProduct = document.querySelector(idProduct);
+    $cibleProduct.classList.add("-active");
+    $productActive = $cibleProduct;
+}
+
+    $bullet.forEach((item)=>{
+        item.addEventListener("click", clickBullet);
+    })

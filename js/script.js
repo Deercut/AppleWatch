@@ -30,7 +30,8 @@ const $bullet = document.querySelectorAll(".bullet");
 let $bulletActive = document.querySelector(".bullet.-active");
 let $productActive = document.querySelector(".product.-active");
 
-function clickBullet() {
+function clickBullet(item) {
+    item.preventDefault();
     let $bulletClicket = this;
     $bulletActive.classList.remove("-active");
     $bulletClicket.classList.add("-active");
